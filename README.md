@@ -4,17 +4,16 @@
 
 <h1>Container Security Pipeline</h1>
 
-<p><strong>The Strategic Control Plane for Unified Supply Chain Trust, Automated Image Governance, and Multi-Cloud Runtime Protection</strong></p>
+<p><strong>The Institutional-Grade Platform for Standardized Container Security Foundations, Supply Chain Governance, and Multi-Cloud Runtime Ecosystems.</strong></p>
 
-[![Security: DevSecOps](https://img.shields.io/badge/Security-DevSecOps-red.svg?style=for-the-badge&labelColor=000000)]()
-[![Status: Production--Ready](https://img.shields.io/badge/Status-Production--Ready-indigo.svg?style=for-the-badge&labelColor=000000)]()
-[![Trust: Signed--Images](https://img.shields.io/badge/Trust-Signed--Images-green.svg?style=for-the-badge&labelColor=000000)]()
-[![Governance: SBOM--Driven](https://img.shields.io/badge/Governance-SBOM--Driven-ff69b4?style=for-the-badge&labelColor=000000)]()
+[![Standard: Security-Excellence](https://img.shields.io/badge/Standard-Security--Excellence-blue.svg?style=for-the-badge&labelColor=000000)]()
+[![Status: Production--Ready](https://img.shields.io/badge/Status-Production--Ready-emerald.svg?style=for-the-badge&labelColor=000000)]()
+[![Focus: Secure--Supply--Chain](https://img.shields.io/badge/Focus-Secure--Supply--Chain-indigo.svg?style=for-the-badge&labelColor=000000)]()
 
 <br/>
 
-> **"Build fast, secure faster."** 
-> Container Security Pipeline is an industrial-grade DevSecOps platform designed to secure the entire lifecycle of containerized applications, from source code commits to active runtime protection on Kubernetes.
+> **"Industrializing container security to automate supply chain foundations."** 
+> **Container Security Pipeline** is an enterprise-grade platform designed to provide a secure, measurable, and highly automated foundation for global containerized operations. It orchestrates the complex lifecycle of the software supply chain—from automated image scanning and cryptographic signing to high-throughput admission control and unified security auditing.
 
 </div>
 
@@ -22,597 +21,263 @@
 
 ## 🏛️ Executive Summary
 
-**Container Security Pipeline** is a premium, flagship security orchestration platform designed for CISOs, DevSecOps Leaders, and Platform Engineers. In a world of increasing supply chain attacks, the "Shift-Left" philosophy is no longer optional—it is a baseline requirement.
+Unverified container artifacts and fragmented supply chain security are strategic operational liabilities; lack of a standardized security pipeline is a primary barrier to organizational engineering maturity. Organizations fail to secure their containerized workloads not because of a lack of scanners, but because of fragmented security standards, lack of automated signature validation, and an inability to orchestrate security planes with operational precision.
 
-This platform provides a **Unified Security Engine** that automates source code scanning, dependency analysis (SCA), secret detection, and container image hardening. It goes beyond simple scanning by implementing **Software Bill of Materials (SBOM)** generation and **Cryptographic Image Signing** (Cosign), ensuring that only verified, policy-compliant artifacts reach your production Kubernetes clusters via automated **Admission Control**.
-
----
-
-## 💡 Why Container Security Pipelines Matter
-
-Traditional security models are too slow for the velocity of containerized delivery.
-- **Supply Chain Vulnerability**: Unverified third-party dependencies introducing critical risks.
-- **Secret Sprawl**: Hardcoded credentials leaking into container registries and production logs.
-- **Untrusted Artifacts**: Deploying images that have been tampered with or bypassed security gates.
-- **Runtime Blindness**: Lack of visibility into container escapes or suspicious network egress.
+This platform provides the **Supply Chain Intelligence Plane**. It implements a complete **Container-Security-Pipeline-as-Code Framework**, enabling CISOs and DevSecOps teams to manage global security foundations as first-class citizens. By automating the identification of supply chain vulnerabilities through real-time telemetry analysis and orchestrating the provisioning of secure performance-driven security policies, we ensure that every organizational container—from microservices in AKS to data workers in EKS—is secured by default, audited for history, and strictly aligned with institutional security frameworks.
 
 ---
 
-## 🚀 Business Outcomes
+## 📐 Architecture Storytelling: Principal Reference Models
 
-### 🎯 Strategic Security Impact
-- **Zero-Trust Deployment**: 100% of production workloads must be signed and verified before admission.
-- **90% Faster Vulnerability MTTR**: Automated alerting and remediation guidance at the point of commit.
-- **Continuous Compliance**: Real-time SBOM inventory for regulatory frameworks (Executive Order 14028).
-- **Reduced Cyber Insurance Premiums**: Verifiable, data-driven proof of a secure software supply chain.
-
----
-
-## 🏗️ Technical Stack
-
-| Layer | Technology | Rationale |
-|---|---|---|
-| **Security Scanning** | Trivy / Grype / Syft | The gold standard for vulnerability and SBOM analysis. |
-| **Trust Layer** | Cosign / Sigstore | Cryptographic signing and transparency for container images. |
-| **Admission Control** | OPA / Gatekeeper / Kyverno | Declarative policy enforcement at the K8s API level. |
-| **Backend** | FastAPI | High-performance asynchronous API for security telemetry. |
-| **Frontend** | React 18, Vite | Premium, high-fidelity dashboard for CISO-level visibility. |
-| **Infrastructure** | Terraform | Multi-cloud IaC for the security control plane. |
-
----
-
-## 📐 Architecture Storytelling: 50+ Diagrams
-
-### 1. Executive High-Level Architecture
-The end-to-end security journey from developer IDE to production runtime.
-
-```mermaid
-graph TD
-    Code[Source Code] --> Pipeline[Secured CI/CD Pipeline]
-    Pipeline --> Scan[Scan: SAST/SCA/Secret]
-    Scan --> Build[Hardened Image Build]
-    Build --> Sign[Cosign: Image Signing]
-    Sign --> Reg[Secure Registry]
-    Reg --> Adm[K8s Admission Control]
-    Adm --> Run[Secured Runtime]
-    Run --> Protect[Runtime Threat Detection]
-```
-
-### 2. Detailed Component Topology
-The internal service boundaries and secure data paths for security findings.
+### 1. Principal Architecture: Global Container Security & Supply Chain Intelligence Plane
+This diagram illustrates the end-to-end flow from security telemetry ingestion and multi-cloud orchestration to admission enforcement, performance validation, and institutional security auditing.
 
 ```mermaid
 graph LR
-    subgraph "Security Control Plane"
-        UI[Executive UI]
-        API_Svc[API Gateway]
-        Worker[Scan Worker]
+    %% Subgraph Definitions
+    subgraph SecurityIngress["Build & Registry Ingress"]
+        direction TB
+        Image_Scans["Vulnerability & Secret Findings"]
+        Signatures["Cosign / Sigstore Attestations"]
+        SBOMs["CycloneDX / SPDX Inventories"]
     end
-    subgraph "Data Tier"
-        DB_Inst[(PostgreSQL)]
-        Cache[(Redis)]
-    end
-    subgraph "DevSecOps Edge"
-        GHA[GitHub Actions Runner]
-        K8s[K8s Cluster Node]
-    end
-    UI --> API_Svc
-    API_Svc --> DB_Inst
-    API_Svc --> Cache
-    Worker --> Cache
-    Worker --> GHA
-    K8s --> API_Svc
-```
 
-### 3. Frontend to Backend Request Path
-Tracing a request to view a supply-chain trust report.
+    subgraph IntelligenceEngine["Supply Chain Intelligence Hub"]
+        direction TB
+        API["FastAPI Security Gateway"]
+        PipelineOrchestrator["Global CI/CD & Trust Hub"]
+        Governance_Hub["Compliance & Guardrail Hub"]
+        AIOps_Validator["Drift & Vulnerability Analysis Hub"]
+    end
 
-```mermaid
-sequenceDiagram
-    participant Sec as Security Analyst
-    participant W as React UI
-    participant A as FastAPI
-    participant E as Policy Engine
+    subgraph OperationsPlane["Distributed Security Ecosystem"]
+        direction TB
+        ManagedAdmissionControllers["Managed Standardized Gatekeepers"]
+        ActivePipelines["Managed Automated Security Pipes"]
+        RegistrySinks["Managed Infrastructure Delivery Hubs"]
+    end
+
+    subgraph OperationsHub["Institutional Data Hub"]
+        direction TB
+        Scorecard["Security Maturity Scorecard"]
+        Analytics["Security Flow & Remediation Velocity Stats"]
+        Audit["Forensic Security Metadata Lake"]
+    end
+
+    subgraph DevOps["Container-Security-Pipeline-as-Code Framework"]
+        direction TB
+        TF["Terraform Security Modules"]
+        DriftBot["Productivity & Config Drift Validator"]
+        ChatOps["Measurement Operations Hub"]
+    end
+
+    %% Flow Arrows
+    SecurityIngress -->|1. Submit Telemetry| API
+    API -->|2. Orchestrate Security| PipelineOrchestrator
+    PipelineOrchestrator -->|3. Apply Privacy Guard| Governance_Hub
+    Governance_Hub -->|4. Assess Drift| AIOps_Validator
     
-    Sec->>W: Select "Image Trust Report"
-    W->>A: GET /images/trust-status
-    A->>E: Verify Signatures & SBOMs
-    E-->>A: Trust Payload (Signed, Compliant)
-    A-->>W: JSON Result
-    W->>W: Render Verification Badges
+    AIOps_Validator -->|5. Execute Admission| OperationsPlane
+    OperationsPlane -->|6. Notify Status| ChatOps
+    API -->|7. Visualize Health| Scorecard
+    
+    Scorecard -->|8. Track Maturity| Analytics
+    Scorecard -->|9. Record Performance| Audit
+    
+    TF -->|10. Provision Backbone| IntelligenceEngine
+    DriftBot -->|11. Inject Friction Risk| PipelineOrchestrator
+    Audit -->|12. Improve Operations| ManagedAdmissionControllers
+
+    %% Styling
+    classDef ingress fill:#f5f5f5,stroke:#616161,stroke-width:2px;
+    classDef intel fill:#e8eaf6,stroke:#1a237e,stroke-width:2px;
+    classDef operations fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef ops fill:#ede7f6,stroke:#311b92,stroke-width:2px;
+    classDef devops fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px;
+
+    class SecurityIngress ingress;
+    class IntelligenceEngine intel;
+    class OperationsPlane operations;
+    class OperationsHub ops;
+    class DevOps devops;
 ```
 
-### 4. Multi-Cluster Security Control Plane
-Managing security policies across global Kubernetes estates.
-
-```mermaid
-graph TD
-    Hub[Central Security Hub] --> Cluster_AKS[Azure: AKS]
-    Hub --> Cluster_EKS[AWS: EKS]
-    Hub --> Cluster_GKE[GCP: GKE]
-    Cluster_AKS --> Policy[OPA / Kyverno Sync]
-```
-
-### 5. Registry Trust Architecture
-The "Chain of Custody" for container images.
-
-```mermaid
-graph LR
-    Build[Build Container] --> Scan[Vulnerability Scan]
-    Scan -->|Pass| Sign[Generate Signature]
-    Sign --> Push[Push to Secure Registry]
-    Push --> Verify[Verify at Admission]
-```
-
-### 6. Regional Deployment Model
-Hosting the security platform for global enterprise resilience.
-
-```mermaid
-graph TD
-    TM[Global Traffic Manager] --> EastUS[East US: Primary Control]
-    TM --> WestEurope[West Europe: Secondary Control]
-    EastUS --> DB_Primary[(Primary DB)]
-```
-
-### 7. DR Failover Model
-Continuous security visibility even during cloud outages.
+### 2. The DevSecOps Lifecycle Flow
+The continuous path of a container security platform from initial integration (build) and aggregation (scan) to active analysis (sign), optimization (admit), and institutional forensic auditing (scorecard).
 
 ```mermaid
 graph LR
-    Primary[Active: East US] -->|Replication| Secondary[Standby: West US]
-    Secondary -->|Heartbeat| Primary
-    Primary --> Failover{System Failure?}
-    Failover -->|Yes| Secondary
+    Integrate["Integrate (Build)"] --> Aggregate["Aggregate (Scan)"]
+    Aggregate --> Analyze["Analyze (Sign)"]
+    Analyze --> Optimize["Optimize (Admit)"]
+    Optimize --> Report["Report & Scorecard"]
 ```
 
-### 8. API Gateway Architecture
-Securing and throttling the security intelligence portal.
-
-```mermaid
-graph TD
-    Req[Incoming Security Event] --> Auth[OIDC / Azure AD]
-    Auth --> Throttling[Rate Limiter]
-    Throttling --> Router[Path Router]
-```
-
-### 9. Queue Worker Architecture
-Managing the heavy lifting of multi-cloud image scanning.
+### 3. Distributed Security Topology
+Strategically orchestrating standardized security across global container regions, diverse cloud architectures, and multi-cloud targets, providing a unified institutional view of global security health and operational readiness.
 
 ```mermaid
 graph LR
-    Event[New Image Pushed] --> Redis[Redis Scan Queue]
-    Redis --> W1[Trivy Worker A]
-    Redis --> W2[Grype Worker B]
-    W1 --> Result[Post Findings to DB]
+    RegionA["Edge: US West (Primary) Ingress"] -->|Sync| Hub["Unified Data Hub"]
+    BU["Hub: EU Central (Secondary) Hub"] -->|Sync| Hub
+    Cloud["Site: Multi-Cloud (Azure/AWS) SaaS"] -->|Sync| Hub
+    Hub --- Logic["Global Security Engine"]
 ```
 
-### 10. Dashboard Analytics Flow
-How raw scanner logs become executive risk scorecards.
+### 4. Security Hub & High-Trust Data Plane Protection Flow
+Executing complex logic for securing the bridge between developers and production clusters, ensuring every organizational identity is verified, artifact-level privacy is maintained, and every security access is according to institutional standards.
 
 ```mermaid
 graph TD
-    Raw[Raw Scan JSON] --> Parser[Findings Parser]
-    Parser --> Scorer[Risk Scoring Engine]
-    Scorer --> Dashboard[Executive UI]
+    SecurityData["Usage: Finding & Trust Data"] --> Bridge["Rule: Guardrail Hub"]
+    Bridge --> PolicyMap["Rule: Security & Policy Map"]
+    PolicyMap -->|Evaluate| Context["PATH: Global Security View"]
+    Context --- Estimate["Security Integrity Score"]
 ```
 
-### 11. Developer Commit to Deploy Flow
-The complete automated security lifecycle.
+### 5. Multi-Cloud Security Federation & Governance Flow
+Automatically managing unified security standards across global regions and diverse cloud tenants, ensuring institutional data residency and privacy boundaries by default.
 
 ```mermaid
 graph LR
-    Commit[Git Commit] --> SAST[SAST Scan]
-    SAST --> Build[Image Build]
-    Build --> SCA[Dependency Scan]
-    SCA --> Sign[Cosign Sign]
-    Sign --> Deploy[K8s Admission]
+    Org["Global Modernization System"] -->|Apply| Guard["Governance Isolation Hub"]
+    Guard -->|Violate| Alert["Remediation Latency Alert"]
+    Guard -->|Pass| Verify["Status: Governed Security"]
+    Verify --- Audit["Isolation Compliance Log"]
 ```
 
-### 12. PR Security Validation Workflow
-Guarding the main branch with automated security checks.
+### 6. Encryption & Perimeter Protection Flow (Security Standard)
+Managing the lifecycle of a security request, automatically enforcing institutional TLS 1.3 and resource encryption standards as required by security policy, ensuring zero-latency security confidence.
+
+```mermaid
+graph LR
+    SecurityReq["Dashboard Access Query"] -->|Check| Gatekeeper["Security Protection Bot"]
+    Gatekeeper -->|Verify| TLS["TLS 1.3 & Resource Encryption Check"]
+    TLS -->|Pass| Admit["Status: Secure Security Traffic"]
+    Admit --- Audit["Security Compliance Log"]
+```
+
+### 7. Institutional Security Maturity Scorecard
+Grading organizational performance based on key indicators: Vulnerability Remediation Index, Trust Attestation Index, and Admission Compliance Scores.
 
 ```mermaid
 graph TD
-    PR[Pull Request] --> Secret[Secret Scan]
-    Secret --> Policy[Policy Compliance Check]
-    Policy --> Approve[Merge to Main]
+    Post["Security Health: 99%"] --> Risk["Delivery Gap: 1%"]
+    Post --- C1["Trust Index (100%)"]
+    Post --- C2["Admission Adoption (98%)"]
 ```
 
-### 13. SAST Lifecycle
-Analyzing source code for security flaws before compilation.
-
-```mermaid
-graph LR
-    Source[Source Code] --> Static[Static Analysis]
-    Static --> Vulns[Vulnerability List]
-    Vulns --> Fail{Critical Findings?}
-```
-
-### 14. Dependency Scan (SCA) Flow
-Identifying vulnerabilities in third-party libraries.
+### 8. Identity & RBAC for Security Governance
+Managing fine-grained access to security hubs, provisioning workers, and audit logs between CISOs, DevSecOps Leads, and Platform SREs.
 
 ```mermaid
 graph TD
-    Manifest[package.json / go.mod] --> Database[Vulnerability DB]
-    Database --> Match[Critical CVE Found]
-    Match --> Alert[Dev Notification]
+    CISO["CISO"] --> Hub["Manage Organization rules"]
+    Lead["DevSecOps Lead"] --> Exec["Execute security policies"]
+    SRE["Platform SRE"] --> Audit["Verify Trust Proofs"]
 ```
 
-### 15. Secret Scan Workflow
-Preventing credential leakage into repositories.
+### 9. IaC Deployment: Container-Security-Pipeline-as-Code Framework
+Using modular Terraform to deploy and manage the versioned distribution of the security tracking hubs, admission protection workers, and forensic metadata lakes.
 
 ```mermaid
 graph LR
-    Code[Codebase] --> Regex[Entropy & Pattern Match]
-    Regex --> Match[API Key / Secret Detected]
-    Match --> Reject[Block Commit]
+    HCL["Infrastructure Code"] --> TF["Terraform Apply"]
+    TF --> Engine["Security Control Plane"]
+    Engine --> Clusters["HA Validation Fleet"]
 ```
 
-### 16. Docker Build Security Model
-Hardening the image creation process.
-
-```mermaid
-graph TD
-    Base[Distroless Base] --> MultiStage[Multi-Stage Build]
-    MultiStage --> User[Non-Root User]
-    User --> Final[Hardened Image]
-```
-
-### 17. Image Scan Lifecycle
-Deep inspection of the container filesystem.
+### 10. AIOps Security Drift & Risk Validation Flow
+Using advanced analytics to identify sudden surges in vulnerability findings, unauthorized policy changes, suspicious configuration drifts, or unusual delivery pattern changes that could result in institutional risk or compromise.
 
 ```mermaid
 graph LR
-    Image[Container Image] --> Layer[Layer Analysis]
-    Layer --> OS[OS Vulns]
-    Layer --> App[App Vulns]
-    App --> Report[Security Score]
+    Drift["Delivery Change Event"] --> Analyzer["Drift Detection Bot"]
+    Analyzer -->|Anomaly| Alert["Security Integrity Alert"]
+    Analyzer -->|Normal| Pass["Status Optimal"]
 ```
 
-### 18. SBOM Generation Flow
-Creating the "Ingredients List" for your software.
-
-```mermaid
-graph TD
-    Artifact[Binary / Image] --> Syft[Syft Analysis]
-    Syft --> SPDX[SPDX / CycloneDX JSON]
-    SPDX --> Inventory[Central SBOM Repository]
-```
-
-### 19. Artifact Attestation Workflow
-Recording metadata as verifiable proof of security checks.
+### 11. Metadata Lake for Forensic Security Audit
+Storing long-term records of every security integration event (metadata), every admission decision executed, and every signature history for institutional record-keeping, compliance auditing, and post-provisioning forensics.
 
 ```mermaid
 graph LR
-    Scan[Image Scan Result] --> Attest[Cosign Attest]
-    Attest --> Sigstore[Sigstore Log]
-```
-
-### 20. Signature Verification Model
-Ensuring only trusted images run in production.
-
-```mermaid
-graph TD
-    Image[Deploy Request] --> Key[Public Key / Sigstore]
-    Key --> Verify[Verify Signature]
-    Verify -->|Pass| Admit[Allow Pod Start]
-```
-
-### 21. Admission Controller Workflow
-The gatekeeper of the Kubernetes API.
-
-```mermaid
-graph LR
-    API[K8s API Request] --> Mutating[Mutating Webhook]
-    Mutating --> Validating[Validating Webhook]
-    Validating --> Registry[ETCD Persistence]
-```
-
-### 22. OPA Policy Decision Flow
-Declarative logic for admission decisions.
-
-```mermaid
-graph TD
-    Req[Admission Request] --> Rego[Rego Policy Engine]
-    Rego -->|Allow| K8S[K8s Controller]
-    Rego -->|Deny| Error[User Error Message]
-```
-
-### 23. Kyverno Mutation / Validation Flow
-Native Kubernetes policy management.
-
-```mermaid
-graph LR
-    Pod[Pod Manifest] --> Kyverno[Kyverno Controller]
-    Kyverno -->|Mutate| AddLabels[Add Security Labels]
-    Kyverno -->|Validate| CheckRoot[Deny Root User]
-```
-
-### 24. Pod Security Standards Model
-Enforcing Privileged, Baseline, and Restricted profiles.
-
-```mermaid
-graph TD
-    NS[Namespace Label] --> PSS[Pod Security Standard]
-    PSS -->|Restricted| Policy[Deny Privileged Escalation]
-```
-
-### 25. Network Policy Architecture
-Isolating container communication (Micro-segmentation).
-
-```mermaid
-graph LR
-    Web[Web Pod] --X Database[DB Pod: Port 5432 Only]
-    Web --X External[No Egress to Internet]
-```
-
-### 26. Secret Injection Workflow
-Injecting credentials securely from Azure Key Vault / AWS Secrets Manager.
-
-```mermaid
-graph TD
-    Vault[External Vault] --> CSI[Secrets Store CSI Driver]
-    CSI --> Mount[Memory-backed Mount]
-    Mount --> Container[App Container]
-```
-
-### 27. Runtime Detection Flow
-Identifying threats in running containers (e.g., Falco).
-
-```mermaid
-graph LR
-    Syscall[Syscall: Execve /dev/shm] --> Engine[Detection Engine]
-    Engine --> Alert[SIEM Alert: Possible Escape]
-```
-
-### 28. Namespace Isolation Model
-Hard multi-tenancy for shared clusters.
-
-```mermaid
-graph TD
-    ProjectA[Project A Namespace] --> Quota[Resource Quota]
-    ProjectA --> NP[Network Policy Isolation]
-```
-
-### 29. Service Account Least Privilege
-Securing the identity of the pod.
-
-```mermaid
-graph LR
-    Pod[App Pod] --> SA[Service Account]
-    SA --> Role[RBAC: Read-Only Secrets]
-```
-
-### 30. Cluster Compliance Workflow
-Continuous scanning of the cluster configuration.
-
-```mermaid
-graph TD
-    Audit[Cluster Audit] --> CIS[CIS Benchmark Check]
-    CIS --> Report[Compliance Scorecard]
-```
-
-### 31. Container Escape Detection Flow
-Identifying attempts to break out of the container sandbox.
-
-```mermaid
-graph LR
-    Action[Write to Host FS] --> Probe[eBPF Probe]
-    Probe --> Block[Kill Process]
-```
-
-### 32. Crypto Mining Detection Model
-Monitoring for unauthorized resource utilization.
-
-```mermaid
-graph TD
-    CPU[High CPU Spike] --> Pattern[Stratum Protocol Match]
-    Pattern --> Alert[Possible Miner Detected]
-```
-
-### 33. Suspicious Egress Workflow
-Detecting Command & Control (C2) communication.
-
-```mermaid
-graph LR
-    IP[Unknown IP Access] --> ThreatIntel[Threat Intelligence API]
-    ThreatIntel --> Match[C2 IP Match]
-    Match --> Sever[Block Connection]
-```
-
-### 34. Drift Detection Lifecycle
-Identifying unauthorized changes to production state.
-
-```mermaid
-graph TD
-    GitOps[Git Source] --> Compare[Actual vs. Desired]
-    Compare -->|Diff| Alert[Drift Alert]
-```
-
-### 35. Threat Triage Flow
-Processing runtime alerts for rapid response.
-
-```mermaid
-graph LR
-    Alert[New Security Alert] --> Scoring[Impact Scoring]
-    Scoring --> Analyst[Human Review]
-```
-
-### 36. Incident Response Workflow
-The automated playbook for containing threats.
-
-```mermaid
-graph TD
-    Threat[Confirmed Threat] --> Isolation[Isolate Pod]
-    Isolation --> Capture[Capture Memory Dump]
-    Capture --> Notify[On-call Pager]
-```
-
-### 37. Quarantine Automation Model
-Neutralizing a compromised pod without deleting evidence.
-
-```mermaid
-graph LR
-    Pod[Compromised Pod] --> Label[Label: quarantined=true]
-    Label --> NP[NetPolicy: Zero Traffic]
-```
-
-### 38. Forensics Evidence Collection
-Gathering data for post-incident analysis.
-
-```mermaid
-graph TD
-    Target[Target Pod] --> Dump[Process Core Dump]
-    Dump --> Logs[Container Logs]
-    Logs --> Vault[Evidence Storage]
-```
-
-### 39. SIEM Integration Model
-Shipping security events to a central SOC.
-
-```mermaid
-graph LR
-    App[Security Platform] --> Fluent[Fluent-bit]
-    Fluent --> Sentinel[Azure Sentinel / Splunk]
-```
-
-### 40. Risk Scoring Workflow
-Quantifying the security posture of an image.
-
-```mermaid
-graph TD
-    Vulns[Critical Vulns] --> Score[Weighted Score]
-    Sigs[No Signature Penalty] --> Score
-    Score --> Grade[Final Grade: A-F]
-```
-
-### 41. Metrics Pipeline
-Visualizing the performance of the security engine.
-
-```mermaid
-graph LR
-    Engine[Security Engine] --> Prom[Prometheus]
-    Prom --> Dash[Grafana Board]
-```
-
-### 42. Logging Architecture
-The backbone of auditable security operations.
-
-```mermaid
-graph TD
-    Scan[Scan Logs] --> Aggregator[Log Aggregator]
-    Aggregator --> LongTerm[S3 / Blob Storage]
-```
-
-### 43. Tracing Model
-Distributed tracing for cross-service security requests.
-
-```mermaid
-sequenceDiagram
-    Portal->>API: Fetch Scan Status
-    API->>Worker: Run Deep Scan
-```
-
-### 44. SLA Monitoring Flow
-Ensuring the security platform is always active.
-
-```mermaid
-graph LR
-    Probe[Synthetic Health Probe] --> Pager[PagerDuty: Platform Team]
-```
-
-### 45. Release Pipeline Workflow
-Automated delivery of the security platform itself.
-
-```mermaid
-graph LR
-    Git[Code Push] --> GHA[CI/CD]
-    GHA --> Prod[Blue/Green Deploy]
-```
-
-### 46. Compliance Reporting Lifecycle
-Generating audit-ready evidence.
-
-```mermaid
-graph TD
-    Data[Aggregated Scans] --> Template[Audit Template]
-    Template --> PDF[Audit Evidence Report]
-```
-
-### 47. Exception Waiver Workflow
-Managing authorized policy deviations.
-
-```mermaid
-graph LR
-    Request[Waiver Request] --> Approval[Risk Officer Approval]
-    Approval --> Rule[Temporary Policy Bypass]
-```
-
-### 48. Executive Review Cadence
-Translating technical debt into business risk.
-
-```mermaid
-graph TD
-    Stats[Weekly Security Stats] --> Board[Executive Risk Review]
-```
-
-### 49. Control Ownership Matrix
-Defining accountability for security remediations.
-
-```mermaid
-graph LR
-    Vuln[SCA Vuln] --> Owner[App Dev Team]
-    Vuln[OS Vuln] --> Owner[Platform Team]
-```
-
-### 50. Remediation Roadmap
-Strategic planning for security maturity.
-
-```mermaid
-graph TD
-    Q1[Q1: Supply Chain Trust] --> Q2[Q2: Runtime Protection]
+    Provision["Sync Interaction Event"] --> Stream["Forensic Stream"]
+    Stream --> Lake["Security Metadata Lake"]
+    Lake --> Trends["Remediation Efficiency Trends"]
 ```
 
 ---
 
-## 🔬 DevSecOps & Supply Chain Education
+## 🏛️ Core Governance Pillars
 
-### 1. The Secure Supply Chain Framework
-We follow the **SLSA (Supply-chain Levels for Software Artifacts)** framework to ensure that every build is auditable and tamper-proof. This involves moving from "Implicit Trust" to "Verifiable Truth" at every stage of the pipeline.
-
-### 2. Shift-Left Security Practices
-By integrating **Trivy** and **Grype** directly into the developer's pull request workflow, we identify 90% of vulnerabilities before they are ever committed to the main branch. This significantly reduces the cost of remediation and prevents "Audit Panic" before releases.
+1.  **Unified Foundation Coordination**: Maximizing resilience by centralizing all security measurement through a single institutional plane.
+2.  **Automated Security Provisioning**: Eliminating "manual scanning" scenarios through proactive orchestration and pattern verification.
+3.  **Sequential Supply Chain Intelligence**: Ensuring zero-interruption operations through dependency-aware trust-driven data engineering.
+4.  **Zero-Trust Identity Protection**: Automatically enforcing identity-based access, data-at-rest encryption, and policy evaluation across all security tiers.
+5.  **Autonomous Operations Logic**: Guaranteeing reliability through automated industry-specific effectiveness monitoring runbooks.
+6.  **Full Security Auditability**: Immutable recording of every security change and security provision for institutional forensics.
 
 ---
 
-## 🚦 Getting Started
+## 🛠️ Technical Stack & Implementation
 
-### 1. Prerequisites
-- **Terraform** (v1.5+).
-- **Docker Desktop**.
-- **Cosign** (for image signing).
-- **kubectl** & **Helm**.
+### Security Engine & APIs
+*   **Framework**: Python 3.11+ / FastAPI.
+*   **Performance Engine**: Custom Python-based logic for multi-toolchain ingestion and DORA-style security metrics.
+*   **Integrations**: Native connectors for Trivy, Grype, Cosign, and Kyverno.
+*   **Persistence**: PostgreSQL (Security Ledger) and Redis (Live Scan State).
+*   **Auth Orchestrator**: Federated OIDC/SAML for least-privilege security management access.
 
-### 2. Local Setup
+### Governance Dashboard (UI)
+*   **Framework**: React 18 / Vite.
+*   **Theme**: Dark, Slate, Indigo (Modern high-fidelity productivity aesthetic).
+*   **Visualization**: D3.js for delivery topologies and Recharts for remediation velocity analytics.
+
+### Infrastructure & DevOps
+*   **Runtime**: AWS EKS or Azure Kubernetes Service (AKS) for management plane.
+*   **Measurement Hub**: Managed event sourcing for immutable productivity timeline reconstruction.
+*   **IaC**: Modular Terraform for deploying the security landing zone and validation fleet.
+
+---
+
+## 🏗️ IaC Mapping (Module Structure)
+
+| Module | Purpose | Real Services |
+| :--- | :--- | :--- |
+| **`infrastructure/security_hub`** | Central management plane | EKS, PostgreSQL, Redis |
+| **`infrastructure/enforcers`** | Distributed admission provisioners | Azure, AWS, GCP APIs |
+| **`infrastructure/security_pipes`** | Data Ingestion Hubs | Webhooks, Lambda |
+| **`infrastructure/auditing`** | Forensic modernization sinks | S3, Athena, Quicksight |
+
+---
+
+## 🚀 Deployment Guide
+
+### Local Principal Environment
 ```bash
-# Clone the repository
-git clone https://github.com/Devopstrio/container-security-pipeline.git
+# Clone the Container Security Pipeline repository
+git clone https://github.com/devopstrio/container-security-pipeline.git
 cd container-security-pipeline
 
-# Setup environment
+# Configure environment
 cp .env.example .env
 
-# Start security services
-docker-compose up --build
+# Launch the Security stack
+make init
+
+# Trigger a mock security update and automated guardrail validation simulation
+make simulate-security
 ```
-Access the Security Dashboard at `http://localhost:3000`.
+
+Access the Management Portal at `http://localhost:3000`.
 
 ---
 
-## 🛡️ Security & Compliance Standards
-- **Zero Trust Admission**: No container is allowed to run without a valid **Cosign** signature.
-- **Continuous SBOM Generation**: Every build produces an **SPDX** formatted SBOM stored in the OCI registry.
-- **Drift Protection**: Any deviation from the "Golden Image" configuration is flagged by the runtime engine.
+## 📜 License
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
-<sub>&copy; 2026 Devopstrio &mdash; Engineering the Future of Secure Software Delivery.</sub>
+<div align="center">
+  <p>© 2026 Devopstrio. All rights reserved.</p>
+</div>
